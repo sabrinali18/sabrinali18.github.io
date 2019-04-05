@@ -13,8 +13,6 @@ const examples = {
       'Buda-Pesth seems a wonderful place.',
   'example3':
       'Scepticism was as much the result of knowledge, as knowledge is of scepticism.'  
-  'example4':
-      'This law of nature we might find abstruse, But gain sufficient for our common use.'
 };
 
 function status(statusText) {
@@ -62,7 +60,7 @@ function prepUI(predict) {
   testExampleSelect.addEventListener('change', () => {
     settextField(examples[testExampleSelect.value], predict);
   });
-  settextField(examples['example3'], predict);
+  settextField(examples['example1'], predict);
 }
 
 async function urlExists(url) {
