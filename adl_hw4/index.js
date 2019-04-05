@@ -62,7 +62,7 @@ function prepUI(predict) {
   testExampleSelect.addEventListener('change', () => {
     settextField(examples[testExampleSelect.value], predict);
   });
-  settextField(examples['example1'], predict);
+  settextField(examples['example3'], predict);
 }
 
 async function urlExists(url) {
