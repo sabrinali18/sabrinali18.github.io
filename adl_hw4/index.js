@@ -135,9 +135,9 @@ class Classifier {
     //console.log(input);
 
     status('Running inference');
+    status('Predicting...');
     const beginMs = performance.now();
     const predictOut = this.model.predict(input);
-    status('Predicting...');
     //console.log(predictOut.dataSync());
     const score = predictOut.dataSync();//[0];
     predictOut.dispose();
