@@ -46,7 +46,6 @@ function disableLoadModelButtons() {
 
 function doPredict(predict) {
   const textField = document.getElementById('text-entry');
-  status('Running getelement')
   const result = predict(textField.value);
   
   score_string = "Class scores: ";
@@ -138,6 +137,7 @@ class Classifier {
     status('Running inference');
     const beginMs = performance.now();
     const predictOut = this.model.predict(input);
+    status('Predicting...')
     //console.log(predictOut.dataSync());
     const score = predictOut.dataSync();//[0];
     predictOut.dispose();
